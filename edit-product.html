@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редактировать товар — Доброснов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Доброснов</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">На сайт</a></li>
+        <li><a href="admin.html">Админка</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="edit-product">
+    <h1>Редактировать товар</h1>
+    <form id="editForm">
+      <label>Название:
+        <input type="text" name="name" required />
+      </label>
+      <label>Категория:
+        <select name="category" required>
+          <option value="beds">Кровати</option>
+          <option value="mattresses">Матрасы</option>
+          <option value="sofas">Диваны</option>
+          <option value="pillows">Подушки</option>
+        </select>
+      </label>
+      <label>Краткое описание:
+        <input type="text" name="shortDesc" required />
+      </label>
+      <label>Полное описание:
+        <textarea name="longDesc" rows="5" required></textarea>
+      </label>
+      <label>Особенности (через запятую):
+        <input type="text" name="features" required />
+      </label>
+      <label>Изображение (URL или путь):
+        <input type="text" name="image" required />
+      </label>
+      <label>Превью изображения:</label>
+        <img id="previewImage" src="" alt="Превью" style="max-width: 300px; border: 1px solid #ccc; margin-bottom: 20px;" />
+      <button type="submit" class="btn">Сохранить изменения</button>
+    </form>
+    <a href="admin.html" class="btn" style="margin-top:20px;display:inline-block;">Назад в админку</a>
+  </main>
+
+  <script src="edit-product.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Добавить товар</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Доброснов</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="add-product.html">Добавить товар</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="add-product">
+    <h1>Добавить товар</h1>
+    <form id="productForm">
+      <label>Название:
+        <input type="text" name="name" required />
+      </label>
+      <label>Категория:
+        <select name="category" required>
+          <option value="beds">Кровати</option>
+          <option value="mattresses">Матрасы</option>
+          <option value="sofas">Диваны</option>
+          <option value="pillows">Подушки</option>
+        </select>
+      </label>
+      <label>Краткое описание:
+        <input type="text" name="shortDesc" required />
+      </label>
+      <label>Полное описание:
+        <textarea name="longDesc" required></textarea>
+      </label>
+      <label>Особенности (через запятую):
+        <input type="text" name="features" required />
+      </label>
+      <label>Изображение (URL или img/bed1.jpg):
+        <input type="text" name="image" required />
+      </label>
+      <button type="submit" class="btn">Добавить</button>
+    </form>
+
+    <h2>Сгенерированный JSON:</h2>
+    <pre id="outputJson"></pre>
+  </main>
+
+  <script src="add-product.js"></script>
+</body>
+</html>
